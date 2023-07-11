@@ -1,0 +1,15 @@
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\bin\Debug\net6.0\zero division exception.exe
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\bin\Debug\net6.0\zero division exception.deps.json
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\bin\Debug\net6.0\zero division exception.runtimeconfig.json
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\bin\Debug\net6.0\zero division exception.dll
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\bin\Debug\net6.0\zero division exception.pdb
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.csproj.AssemblyReference.cache
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.AssemblyInfoInputs.cache
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.AssemblyInfo.cs
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.csproj.CoreCompileInputs.cache
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.dll
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\refint\zero division exception.dll
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.pdb
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\zero division exception.genruntimeconfig.cache
+D:\Semester-5\ASP .NET\Lab - 4\zero division exception\zero division exception\obj\Debug\net6.0\ref\zero division exception.dll

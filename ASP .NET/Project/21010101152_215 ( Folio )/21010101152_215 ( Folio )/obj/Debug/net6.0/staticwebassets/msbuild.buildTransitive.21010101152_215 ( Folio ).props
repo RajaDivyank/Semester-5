@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\21010101152_215 ( Folio ).props" />
+</Project>

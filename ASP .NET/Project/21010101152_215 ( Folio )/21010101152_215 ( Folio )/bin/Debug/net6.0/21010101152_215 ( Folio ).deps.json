@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "21010101152_215 ( Folio )/1.0.0": {
+        "runtime": {
+          "21010101152_215 ( Folio ).dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "21010101152_215 ( Folio )/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
