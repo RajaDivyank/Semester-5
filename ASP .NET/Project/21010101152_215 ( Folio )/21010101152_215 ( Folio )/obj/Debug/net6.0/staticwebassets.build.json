@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "guzyvVfy8zLZNiGmabLtpq1ZoH1he32dKW7ydj4KDPk=",
+  "Hash": "t8Ym8nz00jNVKbnd4q2grnHcsLHZscFQz+6KyPLzKvQ=",
   "Source": "21010101152_215 ( Folio )",
   "BasePath": "_content/21010101152_215 ( Folio )",
   "Mode": "Default",
@@ -170,23 +170,6 @@
       "OriginalItemSpec": "wwwroot\\img\\favicon.png"
     },
     {
-      "Identity": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\home-bg.jpg",
-      "SourceId": "21010101152_215 ( Folio )",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\",
-      "BasePath": "_content/21010101152_215 ( Folio )",
-      "RelativePath": "img/home-bg.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\home-bg.jpg"
-    },
-    {
       "Identity": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\logo.png",
       "SourceId": "21010101152_215 ( Folio )",
       "SourceType": "Discovered",
@@ -219,6 +202,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\me.jpg"
+    },
+    {
+      "Identity": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\me_about.jpeg",
+      "SourceId": "21010101152_215 ( Folio )",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\",
+      "BasePath": "_content/21010101152_215 ( Folio )",
+      "RelativePath": "img/me_about.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\me_about.jpeg"
+    },
+    {
+      "Identity": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\me-bg.jpeg",
+      "SourceId": "21010101152_215 ( Folio )",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\",
+      "BasePath": "_content/21010101152_215 ( Folio )",
+      "RelativePath": "img/me-bg.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\me-bg.jpeg"
     },
     {
       "Identity": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\portfolio\\portfolio-1.jpg",

@@ -33,16 +33,20 @@
       "PackagePath": "staticwebassets\\img\\favicon.png"
     },
     {
-      "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\home-bg.jpg",
-      "PackagePath": "staticwebassets\\img\\home-bg.jpg"
-    },
-    {
       "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\me-bg.jpeg",
+      "PackagePath": "staticwebassets\\img\\me-bg.jpeg"
+    },
+    {
       "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\me.jpg",
       "PackagePath": "staticwebassets\\img\\me.jpg"
+    },
+    {
+      "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\me_about.jpeg",
+      "PackagePath": "staticwebassets\\img\\me_about.jpeg"
     },
     {
       "Id": "D:\\Semester-5\\ASP .NET\\Project\\21010101152_215 ( Folio )\\21010101152_215 ( Folio )\\wwwroot\\img\\portfolio\\portfolio-1.jpg",
