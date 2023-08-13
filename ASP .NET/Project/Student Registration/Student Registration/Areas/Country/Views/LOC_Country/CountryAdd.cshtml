@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Student_Registration.Areas.Country.Models.LOC_CountryModel;
+<form method="post" asp-area="Country" asp-controller="LOC_Country" asp-action="AddCountry">
+    <input type="hidden" asp-for="CountryID" />
+    <div class="form-group">
+        <label for="exampleInputEmail1">Country Name</label>
+        <input asp-for="CountryName" type="text" class="form-control" name="CountryName" placeholder="Enter Country Name">
+        <span asp-validation-for="CountryName"></span><small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Country Code</label>
+        <input asp-for="CountryCode" type="text" class="form-control" id="exampleInputPassword1" placeholder="Country Code">
+        <span asp-validation-for="CountryCode"></span>
+    </div>
+    <div class="form-check">
+        <input type="date" asp-for="Created" class="m-2" id="created" name="Created">
+        <label class="form-check-label" for="exampleCheck1">Created Date</label>
+    </div>
+    <div class="form-check">
+        <input type="date" class="m-2" asp-for="Modified" id="modified" name="Modified">
+        <label class="form-check-label" for="exampleCheck1">Modified Date</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
