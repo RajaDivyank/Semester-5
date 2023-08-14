@@ -3,7 +3,6 @@ CREATE PROCEDURE [dbo].[PR_Country_UpdateByPK]
 	@CountryID		int,
 	@CountryName	varchar(100),
 	@CountryCode	varchar(50)
-
 AS
 UPDATE [dbo].[LOC_Country]
 	

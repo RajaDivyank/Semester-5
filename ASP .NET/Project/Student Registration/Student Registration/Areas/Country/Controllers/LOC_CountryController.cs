@@ -16,14 +16,18 @@ namespace Student_Registration.Areas.Country.Controllers
 		public IActionResult CountryList()
 		{
 			String connectionStr = this._configuration.GetConnectionString("myConnectionString");
-			DataTable dt = new DataTable();
+			
+            //Create Connection
 			SqlConnection conn = new SqlConnection(connectionStr);
 			conn.Open();
+            //Create Command
 			SqlCommand objCmd = conn.CreateCommand();
 			objCmd.CommandType = CommandType.StoredProcedure;
 			objCmd.CommandText = "PR_Country_SelectAll";
 			SqlDataReader objDataReader = objCmd.ExecuteReader();
-			dt.Load(objDataReader);
+            //Create DataTable
+            DataTable dt = new DataTable();
+            dt.Load(objDataReader);
 			conn.Close();
 			return View("CountryList" , dt);
 		}
@@ -36,7 +40,7 @@ namespace Student_Registration.Areas.Country.Controllers
                 conn.Open();
                 SqlCommand objCmd = conn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_Country_DeleteByPK"; // Assuming you have a stored procedure for deleting a country
+                objCmd.CommandText = "PR_Country_DeleteByPK";
                 objCmd.Parameters.AddWithValue("@CountryID", id);
                 int rowsAffected = objCmd.ExecuteNonQuery();
                 conn.Close();
@@ -107,8 +111,8 @@ namespace Student_Registration.Areas.Country.Controllers
                     objCmd.CommandText = "PR_Country_Insert_Record";
                     objCmd.Parameters.AddWithValue("@CountryName", cm.CountryName);
                     objCmd.Parameters.AddWithValue("@CountryCode", cm.CountryCode);
-                    if (cm.Created != null) { objCmd.Parameters.AddWithValue("@Created", cm.Created); }
-                    if (cm.Modified != null) { objCmd.Parameters.AddWithValue("@Modified", cm.Modified); }
+                    /*if (cm.Created != null) { objCmd.Parameters.AddWithValue("@Created", cm.Created); }
+                    if (cm.Modified != null) { objCmd.Parameters.AddWithValue("@Modified", cm.Modified); }*/
                     int rowsAffected = objCmd.ExecuteNonQuery();
                     conn.Close();
 
@@ -135,8 +139,6 @@ namespace Student_Registration.Areas.Country.Controllers
                     objCmd.Parameters.AddWithValue("@CountryID", cm.CountryID);
                     objCmd.Parameters.AddWithValue("@CountryName", cm.CountryName);
                     objCmd.Parameters.AddWithValue("@CountryCode", cm.CountryCode);
-                    if (cm.Created != null) { objCmd.Parameters.AddWithValue("@Created", cm.Created); }
-                    if (cm.Modified != null) { objCmd.Parameters.AddWithValue("@Modified", cm.Modified); }
                     int rowsAffected = objCmd.ExecuteNonQuery();
                     conn.Close();
 

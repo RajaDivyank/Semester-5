@@ -25,11 +25,11 @@
         @foreach (System.Data.DataRow row in Model.Rows)
         {
             <tr>
-                <th scope="row">@row["CountryName"]</th>
+                <th>@row["CountryName"]</th>
                 <td>@row["CountryCode"]</td>
-                <td>@row["Created"]</td>
-                <td>@row["Modified"]</td>
-                <td class="d-flex justify-content-between align-items-center">
+                <td>@Convert.ToDateTime(row["Created"]).ToString("dd-mm-yyyy")</td>
+                <td>@Convert.ToDateTime(row["Modified"]).ToString("dd-mm-yyyy")</td>
+                <td class="d-flex  align-items-center">
                     <form method="post" asp-area="Country" asp-controller="LOC_Country" asp-action="DeleteCountry" asp-route-id="@row["CountryID"]">
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>

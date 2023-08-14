@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Country\Data\" />
+    <Folder Include="Areas\State\Data\" />
   </ItemGroup>
 
   <ItemGroup>

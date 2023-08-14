@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ291bnRyeVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester-5/ASP .NET/Project/Student Registration/Student Registration/Areas/State/Views/LOC_State/StateList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGVcVmlld3NcTE9DX1N0YXRlXFN0YXRlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester-5/ASP .NET/Project/Student Registration/Student Registration/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
