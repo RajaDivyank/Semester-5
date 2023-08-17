@@ -2,4 +2,43 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@model System.Data.DataTable
+
+<form method="post" >
+    <button type="submit" class="btn btn-success">Add Country</button>
+</form>
+<h1>State List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">State Name</th>
+            <th scope="col">State Code</th>
+            <th scope="col">Created</th>
+            <th scope="col">Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (System.Data.DataRow row in Model.Rows)
+        {
+            <tr>
+                <th>@row["StateName"]</th>
+                <td>@row["StateCode"]</td>
+                <td>@Convert.ToDateTime(row["Created"]).ToString("dd-mm-yyyy")</td>
+                <td>@Convert.ToDateTime(row["Modified"]).ToString("dd-mm-yyyy")</td>
+                <td class="d-flex  align-items-center">
+                    <form method="post">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <form method="post">
+                        <button type="submit" class="btn btn-primary ml-2">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
