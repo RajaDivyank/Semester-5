@@ -13,20 +13,20 @@ UPDATE [dbo].[LOC_Country]
 
 
 -- 2. Create Update Procedure to edit/modify existing record for State.
-CREATE PROCEDURE [dbo].[PR_State_UpdateByPK]
-	@StateID	int,
-	@StateName	varchar(100),
-	@CountryID	int,
-	@StateCode	varchar(50)
-
-AS
-UPDATE [dbo].[LOC_State]
-
-	SET [dbo].[LOC_State].[StateName] = @StateName,
+Create   Procedure [dbo].[PR_LOC_State_Update]
+@StateID    int,
+@StateName	varchar(100),
+@CountryID  int,
+@StateCode	varchar(50)
+as
+	Update [dbo].[LOC_State]
+	set
+		[dbo].[LOC_State].[StateName] = @StateName,
 		[dbo].[LOC_State].[CountryID] = @CountryID,
-		[dbo].[LOC_State].[StateCode] = @StateCode
-
-	WHERE [dbo].[LOC_State].[StateID] = @StateID
+		[dbo].[LOC_State].[StateCode] = @StateCode,
+		[dbo].[LOC_State].[Created] = (Select [dbo].[Loc_State].[Created] from [dbo].[Loc_State] where [dbo].[Loc_State].[StateID] = @StateID),
+		[dbo].[LOC_State].[Modified] = GETDATE()
+	where [dbo].[LOC_State].[StateID] = @StateID
 
 
 -- 3. Create Update Procedure to edit/modify existing record for City.

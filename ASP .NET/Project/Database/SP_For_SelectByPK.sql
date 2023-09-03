@@ -16,23 +16,20 @@ ORDER BY [dbo].[LOC_Country].[CountryName]
 
 
 -- 2. Create Procedure for Select State by PK
-CREATE PROCEDURE [dbo].[PR_State_SelectByPK]
-	@StateID int
-AS
+Create Procedure [dbo].[PR_LOC_State_SelectByStateID]
+@StateID int
+as
+	Select 
+		[dbo].[LOC_State].[StateID],
+		[dbo].[LOC_State].[StateName],
+		[dbo].[LOC_State].[CountryID],
+		[dbo].[LOC_State].[StateCode],
+		[dbo].[LOC_State].[Created],
+		[dbo].[LOC_State].[Modified]
+	from [dbo].[LOC_State]
 
-SELECT [dbo].[LOC_State].[StateID]
-      ,[dbo].[LOC_State].[CountryID]
-	  ,[dbo].[LOC_State].[StateName]
-	  ,[dbo].[LOC_State].[StateCode]
-	  ,[dbo].[LOC_State].[Created]
-	  ,[dbo].[LOC_State].[Modified]
-
-FROM [dbo].[LOC_State]
-INNER JOIN [dbo].[LOC_Country]
-ON [dbo].[LOC_Country].[CountryID] = [dbo].[LOC_State].[CountryID]
-WHERE [dbo].[LOC_State].[StateID] = @StateID
-ORDER BY [dbo].[LOC_Country].[CountryName]
-        ,[dbo].[LOC_State].[StateName]
+	where [dbo].[LOC_State].[StateID] = @StateID
+ORDER BY  [dbo].[LOC_State].[StateName]
 
 
 -- 3. Create Procedure for Select City by PK

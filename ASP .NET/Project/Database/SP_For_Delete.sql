@@ -2,21 +2,17 @@
 -- 1. Create Delete Procedure to delete record for Country.
 CREATE PROCEDURE [dbo].[PR_Country_DeleteByPK]
 	@CountryID	int
-
 AS
-
 DELETE FROM [dbo].[LOC_Country]
 WHERE [dbo].[LOC_Country].[CountryID] = @CountryID
 
 
 -- 2. Create Delete Procedure to delete record for State.
-CREATE PROCEDURE [dbo].[PR_State_DeleteByPK]
-	@StateID	int
-
-AS
-
-DELETE FROM [dbo].[LOC_State]
-WHERE [dbo].[LOC_State].[StateID] = @StateID
+Create   Procedure [dbo].[PR_LOC_State_Delete]
+@StateID int
+as
+	Delete from [dbo].[LOC_State]
+	where [dbo].[LOC_State].[StateID] = @StateID
 
 
 -- 3. Create Delete Procedure to delete record for City.

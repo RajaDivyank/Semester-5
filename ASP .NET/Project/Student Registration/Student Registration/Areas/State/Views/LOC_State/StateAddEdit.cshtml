@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Student_Registration.Areas.State.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model LOC_StateModel;
+<form method="post" asp-area="State" asp-controller="LOC_State" asp-action="InsertUpdate">
+    <input type="hidden" asp-for="StateId" />
+    <div class="form-group">
+        <label for="exampleInputEmail1">State Name</label>
+        <input asp-for="StateName" type="text" class="form-control" placeholder="Enter State Name">
+        <span asp-validation-for="StateName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">State Code</label>
+        <input asp-for="StateCode" type="text" class="form-control" placeholder="State Code">
+        <span asp-validation-for="StateCode" class="text-danger"></span>
+    </div>
+    <div class="form-group m-2">
+        <label>Country</label>
+        <select class="btn btn-outline-primary btn-md dropdown-toggle" asp-for="SelectedCountryId">
+            <option value="none" selected disabled hidden>Select country</option>
+            @foreach (LOC_CountryModel abc in Model.Countries)
+            {
+                <option class="bg-light text-dark" value="@abc.CountryId">@abc.CountryName</option>
+            }
+        </select>
+        <span asp-validation-for="SelectedCountryId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

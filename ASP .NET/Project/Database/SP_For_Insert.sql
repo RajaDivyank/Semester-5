@@ -19,7 +19,7 @@ VALUES
 
 
 -- 2. Create Insert Procedure to add new record for State.
-CREATE PROCEDURE [dbo].[PR_State_Insert_Record]
+CREATE PROCEDURE [dbo].[PR_LOC_State_Insert]
 	@StateName	varchar(100),
 	@CountryID	int,
 	@StateCode	varchar(50)

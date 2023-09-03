@@ -10,7 +10,17 @@
 <form method="post" asp-area="Country" asp-controller="LOC_Country" asp-action="CountryAdd">
     <button type="submit" class="btn btn-success">Add Country</button>
 </form>
-<h1>Country List</h1>
+
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Country Search</a>
+        <form class="d-flex w-75" role="search" asp-area="Country" asp-controller="LOC_Country" asp-action="LOC_CountrySearch">
+            <input class="form-control me-2" type="text" placeholder="Country Name" aria-label="Search" name="CountryName">
+            <input class="form-control me-2" type="text" placeholder="Country Code" aria-label="Search" name="CountryCode">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
 
 <table class="table">
     <thead>
@@ -27,8 +37,8 @@
             <tr>
                 <th>@row["CountryName"]</th>
                 <td>@row["CountryCode"]</td>
-                <td>@Convert.ToDateTime(row["Created"]).ToString("dd-mm-yyyy")</td>
-                <td>@Convert.ToDateTime(row["Modified"]).ToString("dd-mm-yyyy")</td>
+                <td>@Convert.ToDateTime(row["Created"]).ToString("dd-MM-yyyy")</td>
+                <td>@Convert.ToDateTime(row["Modified"]).ToString("dd-MM-yyyy")</td>
                 <td class="d-flex  align-items-center">
                     <form method="post" asp-area="Country" asp-controller="LOC_Country" asp-action="DeleteCountry" asp-route-id="@row["CountryID"]">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -41,3 +51,4 @@
         }
     </tbody>
 </table>
+
