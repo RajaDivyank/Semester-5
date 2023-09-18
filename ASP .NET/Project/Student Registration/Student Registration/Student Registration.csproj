@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Branch\Data\" />
+    <Folder Include="Areas\City\Data\" />
     <Folder Include="Areas\Country\Data\" />
     <Folder Include="Areas\State\Data\" />
+    <Folder Include="Areas\Student\Data\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model System.Data.DataTable;
+<form method="post" asp-area="Branch" asp-controller="Branch" asp-action="SelectById">
+    <button type="submit" class="btn-success">Add Branch</button>
+</form>
+<table class="table">
+    <tr>
+        <th>Branch Name</th>
+        <th>Branch Code</th>
+        <th>Created</th>
+        <th>Modified</th>
+    </tr>
+    @foreach (System.Data.DataRow row in Model.Rows)
+    {
+        <tr>
+            <td>
+                @row["BranchName"]
+            </td>
+            <td>
+                @row["BranchCode"]
+            </td>
+            <td>
+                @row["Created"]
+            </td>
+            <td>
+                @row["Modified"]
+            </td>
+            <td class="d-flex justify-content-between align-items-right">
+                <form method="post" asp-area="Branch" asp-controller="Branch" asp-action="DeleteBranch" asp-route-id="@row["BranchID"]">
+                    <button type="submit" class="btn-danger mx-1">Delete</button>
+                </form>
+                <form method="post" asp-area="Branch" asp-controller="Branch" asp-action="SelectById" asp-route-id="@row["BranchID"]">
+                    <button class="btn-primary" type="submit">Edit</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

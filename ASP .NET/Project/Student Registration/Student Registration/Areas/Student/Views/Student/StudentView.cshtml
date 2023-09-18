@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model System.Data.DataTable;
+<form method="post" asp-area="Student" asp-controller="Student" asp-action="StudentAddEdit">
+    <button type="submit">Add Student</button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">StudentName</th>
+            <th scope="col">MobileNoStudent</th>
+            <th scope="col">MobileNoFather</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">IsActive</th>
+            <th scope="col">Password</th>
+            <th scope="col">Created</th>
+            <th scope="col">Modified</th>
+            <th scope="col">BirthDate</th>
+            <th scope="col">CityName</th>
+            <th scope="col">Buttons</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (System.Data.DataRow row in Model.Rows)
+            {
+                <tr>
+                    <th scope="row">@row["StudentName"]</th>
+                    <td>@row["MobileNoStudent"]</td>
+                    <td>@row["MobileNoFather"]</td>
+                    <td>@row["Address"]</td>
+                    <td>@row["Email"]</td>
+                    <td>@row["Age"]</td>
+                    <td>@row["Gender"]</td>
+                    <td>@row["IsActive"]</td>
+                    <td>@row["Password"]</td>
+                    <td>@row["Created"]</td>
+                    <td>@row["Modified"]</td>
+                    <td>@row["BirthDate"]</td>
+                    <td>@row["CityName"]</td>
+                    <td>
+                        <form method="post" asp-area="Student" asp-controller="Student" asp-action="DeleteStudent" asp-route-id="@row["StudentID"]">
+                            <button type="submit" class="btn btn-danger" onclick="confirmDelete('@row["StudentID"]')">Delete</button>
+                        </form>
+                        <form method="post" asp-area="Student" asp-controller="Student" asp-action="StudentAddEdit" asp-route-id="@row["StudentID"]">
+                            <button type="submit" class="btn btn-primary ml-2">Edit</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

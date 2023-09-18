@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Student_Registration.Areas.City.Models;
+@model LOC_CityModel;
+
+<form method="post" asp-action="Save" asp-area="City" asp-controller="LOC_City">
+    <input type="hidden" asp-for="CityID" class="m-2"/>
+    <div class="form-group m-2">
+        <label>City</label>
+        <input type="text" asp-for="CityName" />
+        <br />
+        <label>City code</label>
+        <input type="text" asp-for="Citycode" />
+    </div>
+
+    <div class="form-group m-2">
+        <label>Country</label>
+        <select class="" asp-for="selectedCountryID" onchange="updateStateDropdown()">
+            <option selected disabled hidden>Select the country</option>
+            @foreach (var country in Model.countryList)
+            {
+                <option value="@country.CountryID">@country.CountryName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group m-2">
+        <label>State</label>
+        <select class="" style="min-width:20vw" asp-for="selectedStateID" id="stateDropdown">
+            <option selected disabled hidden>Select the State</option>
+        </select>
+    </div>
+    <div class="form-group m-2">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        function updateStateDropdown() {
+            var selectedCountryID = $("#selectedCountryID").val();
+            var stateID1 = @Model.selectedStateID;
+            $.ajax({
+                url: "/City/LOC_City/GetStatesByCountryID", // Your server-side action to fetch states
+                type: "POST",
+                data: { CountryID: selectedCountryID }, // Pass the selected country ID
+                dataType: "json",
+                success: function (data) {
+                    var stateDropdown = $("#stateDropdown");
+                    console.log(stateID1);
+                    stateDropdown.empty();
+                    if (stateID1 == 0) {
+                        stateDropdown.append($('<option selected disabled hidden>Select the State</option>'));
+                        $.each(data, function (index, state) {
+                            stateDropdown.append($("<option></option>").text(state.stateName).val(state.stateID));
+                        });
+                    }
+                    else {
+                        $.each(data, function (index, state) {
+                        console.log(state);
+                            if (state.stateID != stateID1) {
+                                stateDropdown.append($("<option></option>").text(state.stateName).val(state.stateID));
+
+                            }
+                            else {
+                                stateDropdown.append($("<option selected></option>").text(state.stateName).val(state.stateID));
+                            }
+                        });
+                    }
+
+                },
+                error: function () {
+                    console.log("Error fetching states.");
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            updateStateDropdown(); // Initialize the state dropdown based on the initial selected country
+
+            $("#selectedCountryID").change(function () {
+                updateStateDropdown();
+            });
+
+            // Trigger updateStateDropdown when editing (assuming you have a hidden input field for selectedStateID)
+            var selectedStateID = $("#selectedCountryID").val();
+            if (selectedStateID != null) {
+                updateStateDropdown();
+            }
+        });
+
+    </script>
+}
+

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 using Student_Registration.Areas.State.Models;
 using System.Data;
 using System.Data.SqlClient;

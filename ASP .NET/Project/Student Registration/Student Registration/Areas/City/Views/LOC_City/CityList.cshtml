@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model System.Data.DataTable;
+<form method="POST" asp-area="City" asp-controller="LOC_City" asp-action="CityAddEdit">
+    <button type="submit" class="btn-success">Add City</button>
+</form>
+
+@*<form method="POST" asp-area="City" asp-controller="City" asp-action="Filter">
+    <input type="text" name="cityName" placeholder="City Name" />
+    <input type="text" name="stateName" placeholder="State Name" />
+    <input type="text" name="cityCode" placeholder="City Code" />
+    <input type="text" name="countryName" placeholder="Country Name" />
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>*@
+<table class="table">
+    <tr>
+        <th>City Name</th>
+        <th>City Code</th>
+        <th>State Name</th>
+        <th>Country Name</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (System.Data.DataRow row in Model.Rows)
+    {
+        <tr>
+            <td>
+                @row["CityName"]
+            </td>
+            <td>
+                @row["CityCode"]
+            </td>
+            <td>
+                @row["StateName"]
+            </td>
+            <td>
+                @row["CountryName"]
+            </td>
+            <td class="d-flex justify-content-between align-items-right">
+                <form method="post" asp-area="City" asp-controller="LOC_City" asp-action="DeleteCity" asp-route-CityID="@row["CityID"]">
+                    <button type="submit" class="btn-danger mx-1">Delete</button>
+                </form>
+                <form method="post" asp-area="City" asp-controller="LOC_City" asp-action="CityAddEdit" asp-route-CityID="@row["CityID"]">
+                    <button class="btn-primary" type="submit">Edit</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
