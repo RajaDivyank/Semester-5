@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Student_Registration___Theme__
+build_property.RootNamespace = Student_Registration___Theme__
+build_property.ProjectDir = D:\Semester-5\ASP .NET\Project\Student_Registration ( Theme )\Student_Registration ( Theme )\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Semester-5\ASP .NET\Project\Student_Registration ( Theme )\Student_Registration ( Theme )
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Branch/Views/Branch/BranchList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQnJhbmNoXFZpZXdzXEJyYW5jaFxCcmFuY2hMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Branch/Views/Branch/SelectById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQnJhbmNoXFZpZXdzXEJyYW5jaFxTZWxlY3RCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Branch/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQnJhbmNoXFZpZXdzXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Branch/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQnJhbmNoXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/City/Views/LOC_City/CityAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2l0eVxWaWV3c1xMT0NfQ2l0eVxDaXR5QWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/City/Views/LOC_City/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2l0eVxWaWV3c1xMT0NfQ2l0eVxDaXR5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/City/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2l0eVxWaWV3c1xfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/City/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ2l0eVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Country/Views/LOC_Country/CountryAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ291bnRyeVxWaWV3c1xMT0NfQ291bnRyeVxDb3VudHJ5QWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Country/Views/LOC_Country/CountryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ291bnRyeVxWaWV3c1xMT0NfQ291bnRyeVxDb3VudHJ5TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Country/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ291bnRyeVxWaWV3c1xfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Country/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ291bnRyeVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/State/Views/LOC_State/StateAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGVcVmlld3NcTE9DX1N0YXRlXFN0YXRlQWRkRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/State/Views/LOC_State/StateList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGVcVmlld3NcTE9DX1N0YXRlXFN0YXRlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/State/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGVcVmlld3NcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/State/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RhdGVcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Student/Views/Student/StudentAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XFN0dWRlbnRBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Student/Views/Student/StudentView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XFN0dWRlbnRWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Student/Views/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Areas/Student/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester-5/ASP .NET/Project/Student_Registration ( Theme )/Student_Registration ( Theme )/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

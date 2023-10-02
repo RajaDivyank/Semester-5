@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model Student_Registration___Theme__.Areas.Branch.Models.BranchModel;
+<form method="post" asp-area="Branch" asp-controller="Branch" asp-action="AddEditBranch">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Branch Name</label>
+        <input type="text" class="form-control" placeholder="Branch Name" asp-for="BranchName">
+        <span asp-validation-for="BranchName"></span>
+    </div>
+    <div class="form-group">
+        <label>Branch Code</label>
+        <input type="text" class="form-control" placeholder="Branch Code" asp-for="BranchCode">
+        <span asp-validation-for="BranchCode"></span>
+    </div>
+    <div class="form-group">
+        <label>Created</label>
+        <input type="date" class="form-control" asp-for="Created">
+        <span asp-validation-for="Created"></span>
+    </div>
+    <div class="form-group">
+        <label>Modified</label>
+        <input type="date" class="form-control" asp-for="Modified">
+        <span asp-validation-for="Modified"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

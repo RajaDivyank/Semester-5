@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Student_Registration___Theme__.Areas.Student.Models;
+@model StudentModel;
+<h3>Student Add/Edit Page</h3>
+<form method="post" asp-action="Save" asp-area="Student" asp-controller="Student">
+    <input type="hidden" asp-for="StudentID" />
+    <div class="form-group">
+        <select class="btn btn-secondary dropdown-toggle" asp-for="SelectedCityId">
+            <option selected disabled hidden>Select the City</option>
+            @foreach (CityModel cm in Model.Cities)
+            {
+                <option class="bg-light text-dark" value="@cm.CityId">@cm.CityName</option>
+            }
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <select class="btn btn-secondary dropdown-toggle" asp-for="BranchID">
+            <option selected disabled hidden>Select the Branch</option>
+            @foreach (BranchModel bm in Model.Branches)
+            {
+                <option class="bg-light text-dark" value="@bm.BranchID">@bm.BranchName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Student Name</label>
+        <input type="text" class="form-control" asp-for="StudentName" placeholder="Enter Student Name">
+    </div>
+    <div class="form-group">
+        <label>Mobile No</label>
+        <input asp-for="MobileNoStudent" type="text" class="form-control" placeholder="Mobile No of Student">
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" asp-for="EmailAddress" placeholder="Enter Student Email Address">
+    </div>
+    <div class="form-group">
+        <label>Student Father's mobile number</label>
+        <input type="text" class="form-control" asp-for="MobileNoFather" placeholder="Enter Father's mobile number" />
+    </div>
+    <div class="form-group">
+        <label>Student address</label>
+        <input type="text" class="form-control" asp-for="Address" placeholder="Enter Student Address" />
+    </div>
+    <div class="form-group">
+        <label>Student Birthdate</label>
+        <input type="date" class="form-control" asp-for="BirthDate" />
+    </div>
+    <div class="form-group">
+        <label>Student Gender</label>
+        <input type="text" class="form-control" asp-for="Gender" placeholder="Enter Student Gender" />
+    </div>
+    <div class="form-group">
+        <label>Student Password</label>
+        <input type="password" class="form-control" asp-for="Password" placeholder="Enter the password" />
+    </div>
+    <br />
+    <input type="button" class="btn btn-primary" value="Back" onclick="history.back()"></input>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

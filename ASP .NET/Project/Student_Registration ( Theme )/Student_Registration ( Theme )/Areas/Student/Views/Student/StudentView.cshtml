@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model System.Data.DataTable;
+<div class="card p-4">
+    <div class="d-flex justify-content-between my-2">
+        <h3>Filter</h3>
+    </div>
+    <form method="POST" asp-controller="Student" asp-action="StudentFilter">
+        <input type="text" placeholder="StudentName" name="StudentName" />
+        <input type="text" placeholder="CityName" name="CityName" />
+        <input type="text" placeholder="BranchName" name="BranchName" />
+        <input type="text" placeholder="Gender" name="gender" />
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+</div>
+<div class="card px-4">
+    <div class="d-flex justify-content-between my-4">
+        <h3>Student View</h3>
+        <form method="post" asp-area="Student" asp-controller="Student" asp-action="StudentAddEdit">
+            <button type="submit" class="btn btn-success">Add Student</button>
+        </form>
+    </div>
+
+
+    <table class="table table-striped table-responsive">
+        <thead>
+            <tr>
+
+                <th scope="col">StudentName</th>
+                <th scope="col">MobileNoStudent</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Branch</th>
+                <th scope="col">CityName</th>
+                <th scope="col">BirthDate</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (System.Data.DataRow row in Model.Rows)
+                {
+                    <tr>
+                        <th scope="row">@row["StudentName"]</th>
+                        <td>@row["MobileNoStudent"]</td>
+                        <td>@row["Address"]</td>
+                        <td>@row["Email"]</td>
+                        <td>@row["Age"]</td>
+                        <td>@row["Gender"]</td>
+                        <td>@row["BranchName"]</td>
+                        <td>@row["CityName"]</td>
+                        <td>@row["BirthDate"]</td>
+                        <td>
+                            <form method="post" asp-area="Student" asp-controller="Student" asp-action="DeleteStudent" asp-route-id="@row["StudentID"]" onclick="confirmDelete('@row["StudentID"]')">
+                                <button type="submit" class="btn btn-danger" onclick="confirmDelete('@row["StudentID"]')">Delete</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" asp-area="Student" asp-controller="Student" asp-action="StudentAddEdit" asp-route-id="@row["StudentID"]">
+                                <button type="submit" class="btn btn-primary ml-2">Edit</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    function confirmDelete(StudentId) {
+        if (confirm("Are you sure you want to delete this Student?")) {
+            document.getElementById("deleteForm_" + StudentId).submit();
+        }
+        else {
+            event.preventDefault();
+        }
+    }
+</script>
