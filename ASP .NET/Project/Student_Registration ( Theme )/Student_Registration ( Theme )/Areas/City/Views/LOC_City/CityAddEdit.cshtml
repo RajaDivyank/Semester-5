@@ -1,22 +1,33 @@
-﻿@{
+﻿@using Student_Registration___Theme__.Areas.City.Models;
+@{
+    if (Model.CityID == null)
+    {
+        ViewData["Title"] = "City Add";
+
+    }
+    else
+    {
+        ViewData["Title"] = "City Edit";
+    }
+}
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@using Student_Registration___Theme__.Areas.City.Models;
 @model LOC_CityModel;
+<h1>@ViewData["Title"]</h1>
 <form method="post" asp-action="Save" asp-area="City" asp-controller="LOC_City">
     <input type="hidden" asp-for="CityID" class="form-control" />
     <div class="form-group">
         <label>City</label>
-        <input type="text" asp-for="CityName" class="form-control" />
+        <input type="text" asp-for="CityName" class="form-control" placeholder="Enter City Name" />
         <br />
         <label>City code</label>
-        <input type="text" asp-for="Citycode" class="form-control" />
+        <input type="text" asp-for="Citycode" class="form-control" placeholder="Enter City Code" />
     </div>
 
     <div class="form-group">
         <label>Country</label>
-        <select class="" asp-for="selectedCountryID" onchange="updateStateDropdown()" class="form-control">
+        <select class="my-3" asp-for="selectedCountryID" onchange="updateStateDropdown()" class="form-control">
             <option selected disabled hidden>Select the country</option>
             @foreach (var country in Model.countryList)
             {
@@ -26,12 +37,13 @@
     </div>
     <div class="form-group">
         <label>State</label>
-        <select class="" style="min-width:20vw" asp-for="selectedStateID" id="stateDropdown">
+        <select class="my-3" style="min-width:20vw" asp-for="selectedStateID" id="stateDropdown">
             <option selected disabled hidden>Select the State</option>
         </select>
     </div>
-    <div class="form-group">
+    <div class="form-group m-2">
         <button class="btn btn-primary" type="submit">Submit</button>
+        <input type="button" class="btn btn-primary" value="Back" onclick="history.back()">
     </div>
 </form>
 

@@ -24,7 +24,10 @@
         <input type="date" class="form-control" asp-for="Modified">
         <span asp-validation-for="Modified"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="m-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="button" class="btn btn-primary" value="Back" onclick="history.back()">
+    </div>
 </form>
 @section Scripts{
     @{

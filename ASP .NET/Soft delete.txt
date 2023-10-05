@@ -1,0 +1,3 @@
+Soft delete
+Pela delete nu button press kare tyare isActive bit ne 0 kari nakhvu
+and etla records nej dekhadva jetla ma isActive bit 1 hoy

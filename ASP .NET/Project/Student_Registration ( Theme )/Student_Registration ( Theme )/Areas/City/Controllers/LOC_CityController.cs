@@ -110,7 +110,6 @@ namespace Student_Registration___Theme__.Areas.City.Controllers
             conn.Close();
             return RedirectToAction("CityList");
         }
-        //[HttpPost]
         public IActionResult GetStatesByCountryID(int CountryID)
         {
             string connectionString = this._configuration.GetConnectionString("myConnectionString");
