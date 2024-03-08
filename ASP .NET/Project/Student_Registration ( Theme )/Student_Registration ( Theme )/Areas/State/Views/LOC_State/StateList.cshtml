@@ -29,6 +29,7 @@
                 <th scope="col">State Name</th>
                 <th scope="col">State Code</th>
                 <th scope="col">Country Name</th>
+                <th scope="col">City Count</th>
                 <th scope="col">Created</th>
                 <th scope="col">Modified</th>
                 <th scope="col">actions</th>
@@ -41,8 +42,10 @@
                     <th scope="row">@row["StateName"]</th>
                     <td>@row["StateCode"]</td>
                     <td>@row["CountryName"]</td>
+                    <td>@Convert.ToInt32(row["CityCount"]).ToString()</td>
                     <td>@Convert.ToDateTime(row["Created"]).ToString("dd-MM-yyyy")</td>
                     <td>@Convert.ToDateTime(row["Modified"]).ToString("dd-MM-yyyy")</td>
+
                     <td class="d-flex justify-content-between align-items-center">
                         <form method="post" asp-area="State" asp-controller="LOC_State" asp-action="DeleteState" asp-route-StateID="@row["StateID"]" onclick="confirmDelete('@row["StateID"]')">
                             <button type="submit" class="btn btn-danger">Delete</button>

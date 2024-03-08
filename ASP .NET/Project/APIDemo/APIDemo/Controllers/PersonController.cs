@@ -50,7 +50,7 @@ namespace APIDemo.Controllers
                 return NotFound(data);
             }
         }
-        [HttpDelete]
+        [HttpDelete("{PersonId}")]
         public IActionResult DeleteById(int PersonId)
         {
             Person_Base person = new Person_Base();
@@ -70,7 +70,7 @@ namespace APIDemo.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Add([FromForm] PersonModel personModel)
+        public IActionResult Add( PersonModel personModel)
         {
             Person_Base person = new Person_Base();
             bool IsSuccess = person.API_PERSON_Insert_Record(personModel);
@@ -89,11 +89,10 @@ namespace APIDemo.Controllers
             }
         }
         [HttpPut]
-        public IActionResult Edit( int PersonId ,[FromForm] PersonModel personModel)
+        public IActionResult Edit(PersonModel personModel)
         {
             Person_Base person = new Person_Base();
-            personModel.PersonId = PersonId;
-            bool IsSuccess = person.API_PERSON_UpdateByPERSONID(PersonId,personModel);
+            bool IsSuccess = person.API_PERSON_UpdateByPERSONID(personModel.PersonId,personModel);
             Dictionary<string, dynamic> data = new Dictionary<string, dynamic>();
             if (IsSuccess)
             {
